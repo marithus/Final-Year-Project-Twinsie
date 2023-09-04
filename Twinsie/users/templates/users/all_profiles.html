@@ -1,0 +1,16 @@
+{% extends "feed/base.html" %}
+
+{% block title %}Profies{% endblock %}
+
+{% block content %}
+
+<div class="col-md-8 m-auto">
+
+{% for profile in profiles %}
+<div class="content-section">
+    <a href="{% url 'profile-detail-view' profile.pk %}">{{profile}}</a>
+</div>
+{% endfor %}
+
+</div>
+{% endblock %}

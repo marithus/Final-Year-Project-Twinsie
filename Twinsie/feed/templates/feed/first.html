@@ -1,0 +1,46 @@
+{% extends "feed/base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<!-- ADDITIONAL STYLING -->
+
+<style>
+  body{
+    background-color: #fff;
+  }
+</style>
+
+<div>
+    
+    <!-- Page Hero-->
+    <section class=" page-header page-header-light bg-white mt-4 container">
+      <div class="page-header-content pt-5">
+          <div class="container">
+              <div class="row align-items-center">
+                  <div class="col-lg-6 " data-aos="fade-up">
+                      <h1 style="" class="page-header-title font-weight-bold">Let’s pair up with people around the world!</h1>
+                      <br>
+                      <p class="page-header-text mb-5">
+                        Pair programming is a software development technique in which two programmers work together at one workstation. One, the driver, writes code while the other, the observer or navigator, reviews each line of code as it is typed in. The two programmers switch roles frequently..
+                        <br><br>
+                        Designed and developed by Duy
+                      </p>
+
+                      {% if user.is_authenticated %}
+                        <a class="btn btn-lg btn-primary font-weight-bold mr-2 rounded-pill px-4 py-2" href="{% url 'posts-follow-view' %}">Get Started</a>
+                        <a class="btn btn-lg btn-primary-soft text-primary font-weight-bold" href="#"><i class="far fa-check-circle"></i>&nbsp;LOGGED IN</a>
+                      {% else %}
+                        <a class="btn btn-lg btn-primary font-weight-bold mr-2 rounded-pill px-4 py-2" href="{% url 'register' %}">REGISTER</a>
+                        <a class="btn btn-lg btn-primary-soft text-primary font-weight-bold" href="{% url 'account_login' %}">LOGIN</a>
+                      {% endif %}
+                  </div>
+                  <div class="col-lg-6 d-none d-lg-block" data-aos="fade-up" data-aos-delay="100"><img class="img-fluid" src="/static/feed/images/Pair.png" /></div>
+              </div>
+          </div>
+      </div>
+      <br>
+    </section>
+</div>
+{% endblock %}
