@@ -62,6 +62,7 @@ def register(request):
             r = requests.post('https://www.google.com/recaptcha/api/siteverify', data=data)
             result = r.json()
 
+
             # if result['success']:
             form.save()
             username = form.cleaned_data.get('username')

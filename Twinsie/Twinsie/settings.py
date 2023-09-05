@@ -67,7 +67,8 @@ INSTALLED_APPS = [
     'chat',
     'channels',
     'rest_framework',
-    'drf_yasg'
+    'drf_yasg',
+    'videocall',
 ]
 
 MIDDLEWARE = [
@@ -122,9 +123,6 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
-        #SuperUser info
-        #User: duy
-        #Password: Password124
     }
 }
 

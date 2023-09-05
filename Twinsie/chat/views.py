@@ -20,8 +20,6 @@ def room_enroll(request):
     }
     return render(request, 'chat/join_room.html', context)
 
-
-
 @login_required
 def room_choice(request, friend_id):
     friend = User.objects.filter(pk=friend_id)
