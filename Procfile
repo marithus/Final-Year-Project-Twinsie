@@ -1,2 +1,1 @@
-web: python manage.py runserver 0.0.0.0:\$PORT
-chatworker: python manage.py runworker --settings=Twinsie.settings -v2
+web: gunicorn Twinsie.wsgi --log-file -
