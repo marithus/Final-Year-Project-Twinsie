@@ -14,7 +14,7 @@ from pathlib import Path
 import os
 from dotenv import load_dotenv
 from django.contrib.messages import constants as messages
-import django_heroku
+
 
 # Adding graphviz for ERD
 os.environ["PATH"] += os.pathsep + 'C:/Program Files/Graphviz/bin/'
@@ -229,6 +229,3 @@ GRAPH_MODELS ={
     'all_applications': True,
     'group_models': True,
 }
-
-#Activate Django Heroku.
-django_heroku.settings(locals())
