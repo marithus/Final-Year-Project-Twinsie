@@ -88,3 +88,4 @@ typing-extensions==3.10.0.0
 tzdata==2022.1
 urllib3==1.26.6
 zope.interface==5.4.0
+whitenoise
