@@ -1,1 +1,1 @@
-web: gunicorn Twinsie.wsgi --log-file -
+web: python manage.py runserver
