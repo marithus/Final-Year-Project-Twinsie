@@ -110,10 +110,10 @@ ASGI_APPLICATION = "Twinsie.routing.application"
 
 # Channels redis config:
 CHANNEL_LAYERS = {
-    'default' : {
-        'BACKEND' : 'channels_redis.core.RedisChannelLayer',
-        'CONFIG' : {
-            'hosts' : [os.environ.get('REDIS_URL', 'redis://localhost:6379')]
+    "default": {
+        "BACKEND": "channels_redis.core.RedisChannelLayer",
+        "CONFIG": {
+            "hosts": [os.environ.get('REDIS_URL', 'redis://localhost:6379')],
         },
     },
 }
@@ -230,18 +230,18 @@ GRAPH_MODELS ={
     'all_applications': True,
     'group_models': True,
 }
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'handlers': {
-        'console': {
-            'class': 'logging.StreamHandler',
-        },
-    },
-    'loggers': {
-        'django': {
-            'handlers': ['console'],
-            'level': os.getenv('DJANGO_LOG_LEVEL', 'ERROR'),
-        },
-    },
-}
+# LOGGING = {
+#     'version': 1,
+#     'disable_existing_loggers': False,
+#     'handlers': {
+#         'console': {
+#             'class': 'logging.StreamHandler',
+#         },
+#     },
+#     'loggers': {
+#         'django': {
+#             'handlers': ['console'],
+#             'level': os.getenv('DJANGO_LOG_LEVEL', 'ERROR'),
+#         },
+#     },
+# }
