@@ -70,13 +70,13 @@ def register(request):
             result = r.json()
 
 
-            # if result['success']:
-            form.save()
-            username = form.cleaned_data.get('username')
-            messages.success(request, f"Your account has been created! You can login now")
-            return redirect('login')
-        # else:
-            #     messages.error(request, 'Invalid reCAPTCHA. Please try again.')            
+            if result['success']:
+                form.save()
+                username = form.cleaned_data.get('username')
+                messages.success(request, f"Your account has been created! You can login now")
+                return redirect('login')
+        else:
+                messages.error(request, 'Invalid reCAPTCHA. Please try again.')            
             
     else:
         form = UserRegisterForm()
