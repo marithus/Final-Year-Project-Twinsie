@@ -14,6 +14,13 @@ import requests
 from django.conf import settings
 from friend.utils import get_friend_request_or_false
 from friend.friend_request_status import FriendRequestStatus
+from rest_framework import viewsets
+from .serializers import ProfileSerializer
+
+"""Serializers Viewse"""
+class ProfileViewSet(viewsets.ModelViewSet):
+    queryset = Profile.objects.all()
+    serializer_class = ProfileSerializer
 
 
 @receiver(user_logged_in)

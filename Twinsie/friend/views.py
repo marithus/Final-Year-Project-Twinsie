@@ -3,6 +3,17 @@ from django.http import HttpResponse
 import json
 from django.contrib.auth.models import User
 from friend.models import FriendList, FriendRequest
+from rest_framework import viewsets
+from .serializers import FriendListSerializer, FriendRequestSerializer
+
+"""Serializers ViewSet"""
+class FriendListViewSet(viewsets.ModelViewSet):
+    queryset = FriendList.objects.all()
+    serializer_class = FriendListSerializer
+
+class FriendRequestViewSet(viewsets.ModelViewSet):
+    queryset = FriendRequest.objects.all()
+    serializer_class = FriendRequestSerializer
 
 
 

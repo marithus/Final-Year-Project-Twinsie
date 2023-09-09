@@ -5,6 +5,12 @@ from .models import Room, Chat
 from django.db.models import Q
 from friend.models import FriendList
 from django.contrib.auth.models import User
+from rest_framework import viewsets
+from .serializers import RoomSerializer
+
+class RoomViewSet(viewsets.ModelViewSet):
+    queryset = Room.objects.all()
+    serializer_class = RoomSerializer
 
 
 @login_required

@@ -13,6 +13,17 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.template.loader import render_to_string
 import random
 from feed.utils import is_ajax
+from rest_framework import viewsets
+from .serializers import PostSerializer, CommentSerializer
+
+""""Serializers Viewset"""
+class PostViewSet(viewsets.ModelViewSet):
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer
+
+class CommentViewSet(viewsets.ModelViewSet):
+    queryset = Comment.objects.all()
+    serializer_class = CommentSerializer
 
 
 """ Home page with all posts """

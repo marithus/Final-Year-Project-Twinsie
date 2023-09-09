@@ -1,9 +1,17 @@
-from django.urls import path
 from . import views
 from .views import AllSaveView, PostListView, PostDetailView, PostCreateView, PostUpdateView, PostDeleteView, SaveView, UserPostListView, LikeView,LikeCommentView, posts_of_following_profiles,  AllLikeView
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from .views import PostViewSet, CommentViewSet
+
+# Create a router and register our viewsets with it.
+router = DefaultRouter()
+router.register(r'posts', PostViewSet)
+router.register(r'comments', CommentViewSet)
 
 urlpatterns = [
     path('', views.first, name='firsthome'),
+    path('api/', include(router.urls)),
     path('home/', PostListView.as_view(), name='feed-home'),
     path('feed/', posts_of_following_profiles, name='posts-follow-view'),
     path('post/user/<str:username>/', UserPostListView.as_view(), name='user-posts'),

@@ -3,7 +3,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from notification.models import Notification
 
-# Create your views here.
+
+
 
 """ All notifications """
 @login_required

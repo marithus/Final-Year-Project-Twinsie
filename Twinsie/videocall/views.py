@@ -4,12 +4,17 @@ from django.http import JsonResponse
 import random
 import time
 from agora_token_builder import RtcTokenBuilder
-
 from friend.models import FriendList
 from .models import RoomMember
 import json
 from django.views.decorators.csrf import csrf_exempt
+from rest_framework import viewsets
+from .serializers import RoomMemberSerializer
 
+"""Serializer Viewset"""
+class RoomMemberViewSet(viewsets.ModelViewSet):
+    queryset = RoomMember.objects.all()
+    serializer_class = RoomMemberSerializer
 
 # Create your views here.
 
@@ -22,24 +27,6 @@ def lobby(request):
 
 def room(request):
     return render(request, 'videocall/room.html')
-    # vc_UID = request.POST["vc_UID"]
-    # vc_token = request.POST["vc_token"]
-    # vc_to = request.POST["vc_to"]
-    # vc_from = request.POST["vc_from"]
-
-    # friends = FriendList.objects.filter(user=request.user)[0].friends.all()
-    # id_list = list(friends.values_list('id',flat=True))
-
-    # context = {
-    #     'UID': vc_UID,
-    #     'token': vc_token,
-    #     'room': "VCROOM_" + vc_to + "_" + vc_from if vc_to < vc_from else "VCROOM_" + vc_from + "_" + vc_to,
-    #     'name': request.user.username
-    # }
-    # if vc_to in id_list and vc_from == str(request.user.id):
-    #     return render(request, 'videocall/room.html', context)
-    # else:
-    #     redirect('vc-lobby')
 
 def validateVC(request,vc_to):
     friends = FriendList.objects.filter(user=request.user)[0].friends.all()
