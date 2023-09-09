@@ -1,7 +1,7 @@
 {% extends "feed/base.html" %}
 
 {% block title %}Home{% endblock %}
-
+{% load static %}
 {% block content %}
 
 <!-- ADDITIONAL STYLING -->
@@ -36,7 +36,7 @@
                         <a class="btn btn-lg btn-primary-soft text-primary font-weight-bold" href="{% url 'account_login' %}">LOGIN</a>
                       {% endif %}
                   </div>
-                  <div class="col-lg-6 d-none d-lg-block" data-aos="fade-up" data-aos-delay="100"><img class="img-fluid" src="/static/feed/images/Pair.png" /></div>
+                  <div class="col-lg-6 d-none d-lg-block" data-aos="fade-up" data-aos-delay="100"><img class="img-fluid" src="{% static "feed/images/Pair.png" %}" /></div>
               </div>
           </div>
       </div>
