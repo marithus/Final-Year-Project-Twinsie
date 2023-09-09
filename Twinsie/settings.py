@@ -242,3 +242,8 @@ GRAPH_MODELS ={
     'all_applications': True,
     'group_models': True,
 }
+
+#Heroku login verification
+CSRF_TRUSTED_ORIGINS = [
+    'https://twinsie-ac751fa5d700.herokuapp.com '
+]
