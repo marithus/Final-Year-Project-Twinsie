@@ -2,7 +2,7 @@
 The website is live.
 http://twinsie-ac751fa5d700.herokuapp.com/
 
-##Chat feature
+## Chat feature
 To use the chat feature, you will need to remove the s from https:// in order for redis to route.
 
 ## Features :
@@ -21,6 +21,6 @@ To use the chat feature, you will need to remove the s from https:// in order fo
 <li>Public Profile view</li>
 
 
-##Test user login
+## Test user login
 User1:Twinsie1
 User2:Twinsie1
