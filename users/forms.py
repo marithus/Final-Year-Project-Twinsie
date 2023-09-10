@@ -26,7 +26,7 @@ class ProfileUpdateForm(forms.ModelForm):
     width = forms.FloatField(widget=forms.HiddenInput(), required=False)
     height = forms.FloatField(widget=forms.HiddenInput(), required=False)
 
-    image = forms.ImageField(label=('Image'), error_messages = {'invalid':("Image files only")}, widget=forms.FileInput, required=False)
+    image = forms.ImageField(label=('Profile Image'), error_messages = {'invalid':("Image files only")}, widget=forms.FileInput, required=False)
     class Meta:
         model = Profile
         fields = ['bio','date_of_birth','image',]
