@@ -1,5 +1,10 @@
 # Final Year Project
- 
+The website is live.
+http://twinsie-ac751fa5d700.herokuapp.com/
+
+##Chat feature
+To use the chat feature, you will need to remove the s from https:// in order for redis to route.
+
 ## Features :
 
 <li>Sign Up, Login, OAuth 2.0(Google, Github) </li>
