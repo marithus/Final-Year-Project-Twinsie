@@ -64,10 +64,7 @@
 {% block script %}
 <script>
     async function handleVCRedirect(id1,name) {
-        // let room = (parseInt(id1) > parseInt(id2)) ? "vcroom_" + id1 + "_" + {{request.user.id}} : "vcroom_" + {{request.user.id}} + "_" + id1;
-        // room = room.toUpperCase()
         room = id1
-
         let response = await fetch(`get_token/?channel=${room}`)
         
         if(response.status == 200) {
