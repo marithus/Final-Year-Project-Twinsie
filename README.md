@@ -2,8 +2,8 @@
 The website is live.
 http://twinsie-ac751fa5d700.herokuapp.com/
 
-## Chat feature
-To use the chat feature, you will need to remove the s from https:// in order for redis to route.
+## Disclaimer:
+To use the chat feature, you will need to change to Http in order to chat.
 
 ## Features :
 
@@ -24,3 +24,25 @@ To use the chat feature, you will need to remove the s from https:// in order fo
 ## Test user login
 User1:Twinsie1
 User2:Twinsie1
+
+
+## Installation
+To run on your local machines, run these commands (Windows Only)
+```bash
+    $ python -m venv venv
+    $ source venv/Scripts/activate
+    (venv) pip install -r requirements.txt
+    (venv) cd Final-Project-Year-Twinsie
+    (venv) python manage.py makemigrations
+    (venv) python manage.py migrate
+    (venv) python manage.py createsuperuser
+    (venv) python manage.py runserver
+```
+
+## Running Tests
+
+To run tests, run the following command
+
+```bash
+  python manage.py test
+```
