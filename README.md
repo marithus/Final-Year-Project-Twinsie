@@ -1,12 +1,11 @@
 # Final Year Project
-The website is live.
+Twinsie is live.
 http://twinsie-ac751fa5d700.herokuapp.com/
 
 ## Disclaimer:
 To use the chat feature, you will need to change to Http in order to chat.
 
 ## Features :
-
 <li>Sign Up, Login, OAuth 2.0(Google, Github) </li>
 <li>Intuitive UI and UX design</li>
 <li>reCaptcha v2</li>
@@ -21,12 +20,12 @@ To use the chat feature, you will need to change to Http in order to chat.
 <li>Public Profile view</li>
 
 
-## Test user login
-User1:Twinsie1
-User2:Twinsie1
+## Test user login:
+<li>User1:Twinsie1</li>
+<li>User2:Twinsie1</li>
 
 
-## Installation
+## Installation Locally:
 To run on your local machines, run these commands (Windows Only)
 ```bash
     $ python -m venv venv
