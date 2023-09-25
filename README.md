@@ -5,8 +5,8 @@ http://twinsie-ac751fa5d700.herokuapp.com/
 ## Disclaimer:
 To use the chat feature, you will need to change to Http in order to chat.
 
-## Features :
-<li>Sign Up, Login, OAuth 2.0(Google, Github) </li>
+## Features:
+<li>Sign Up, Login </li>
 <li>Intuitive UI and UX design</li>
 <li>reCaptcha v2</li>
 <li>Logout, Forgot Password</li>
@@ -25,7 +25,7 @@ To use the chat feature, you will need to change to Http in order to chat.
 <li>User2:Twinsie1</li>
 
 
-## Installation Locally:
+## Local Installation :
 To run on your local machines, run these commands (Windows Only)
 ```bash
     $ python -m venv venv
